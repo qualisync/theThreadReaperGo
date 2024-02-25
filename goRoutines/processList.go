@@ -15,8 +15,6 @@ func ProcessNumberList() []int {
 		go doubleNumberToArray(&wg, &lock, &doubleNumbers[index], number)
 	}
 
-	for i := 0; i < len(numbers); i++ {
-	}
 	wg.Wait() // Wait for the goroutines to finish
 
 	return doubleNumbers
